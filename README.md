@@ -10,3 +10,8 @@
 - Finissez par la commande ***symfony console doctrine:fixtures:load***.
 - Rendez vous sur ***localhost:8000***
 - Le projet devrais s'afficher
+
+###Identifiants Admin:
+
+- login : ***admin@admin.fr***
+- Mdp : ***admin***

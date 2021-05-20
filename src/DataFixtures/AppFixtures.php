@@ -61,6 +61,12 @@ class AppFixtures extends Fixture
             $users[] = $user;
         }
 
+        $user->setEmail('admin@admin.fr');
+        $user->setPassword('admin');
+        $user->setRoles(['ROLE_ADMIN']);
+        $manager->persist($user);
+        $users[] = $user;
+
         $movies = [];
 
         for($i=0; $i <50; $i++){
