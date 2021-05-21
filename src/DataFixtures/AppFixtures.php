@@ -77,12 +77,10 @@ class AppFixtures extends Fixture
             $movie->setSynopsis($lipsum->paragraphs(2));
             $movie->setSeen($faker->boolean(50));
             $movie->setWatchList($faker->boolean(50));
-            $movie->setImage($faker->imageUrl());
+            $movie->setImage('https://fr.web.img4.acsta.net/r_654_368/newsv7/21/01/11/16/11/2598562.jpg');
             $movie->addActor($actors[$faker->numberBetween(0,49)]);
             $movie->addGenre($genres[$faker->numberBetween(0,49)]);
             $movie->addStudio($studios[$faker->numberBetween(0,49)]);
-
-
             $manager->persist($movie);
             $movies[] = $movie;
         }

@@ -60,6 +60,16 @@ class HomeController extends AbstractController
         ]);
     }
 
+
+    /**
+     * @Route("/about", name="about")
+     */
+    public function about(): Response
+    {
+
+        return $this->render('home/about.html.twig');
+    }
+
     /**
      * @Route("/actor", name="actor")
      */
@@ -70,6 +80,7 @@ class HomeController extends AbstractController
             'actors'=>$actor
         ]);
     }
+
     /**
      * @Route("/showByActor/{id}", name="showByActor")
      */
@@ -93,7 +104,7 @@ class HomeController extends AbstractController
         ]);
     }
     /**
-     * @Route("/showByStudio/{id}", name="showByActor")
+     * @Route("/showByStudio/{id}", name="showByStudio")
      */
     public function showByStudio(Studio $studio): Response
     {
@@ -102,14 +113,5 @@ class HomeController extends AbstractController
         return $this->render("home/index.html.twig",[
             'movies'=>$studio->getMovies(),
         ]);
-    }
-
-    /**
-     * @Route("/about", name="about")
-     */
-    public function about(): Response
-    {
-
-        return $this->render('home/about.html.twig');
     }
 }

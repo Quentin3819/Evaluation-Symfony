@@ -6,30 +6,32 @@
 
 {% block body %}
 
-    <h1>
-        bienvenue notre Site, voici tous nos Actors
+    <h1 class="text-center p-5">
+        Bienvenue notre Site, voici tous nos Actors
     </h1>
 
 
     </div>
 
     {% if actors is defined %}
-        <div class="row justify-content-around col-3">
-            <h3>Actors</h3>
-            {% for actor in actors %}
-                <div class="card text-white bg-primary mb-3 col-12">
-                    <div class="card-body d-flex justify-content-between">
-                        <a href="/showByActor/{{ actor.id }}">
-                            <p>genre : {{ actor.firstName }}</p>
-                        </a>
-                        <span class="badge bg-primary rounded-pill">{{ actor.movies | length }}</span>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                {% for actor in actors %}
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <a href="/showByActor/{{ actor.id }}" class="link-dark" style="text-decoration: none">
+                                <div class="card-body d-flex justify-content-between">
+                                    <h5 class="card-title">{{ actor.firstName }} {{ actor.lastName }}</h5>
+                                    <p class="card-text">{{ actor.movies | length }}</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
     {% endif %}
-
-    </div>
 
 
 {% endblock %}
