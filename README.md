@@ -11,7 +11,7 @@
 - Rendez vous sur ***localhost:8000***
 - Le projet devrais s'afficher
 
-###Identifiants Admin:
+##Identifiants Admin:
 
 - login : ***admin@admin.fr***
 - Mdp : ***admin***
