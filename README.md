@@ -1,7 +1,7 @@
 # Evaluation Symfony
 
 - Clonez le git.
-- Dans le dossier lancez la commande ***symfony server:start -d***.
+- Dans le dossier lancez la commande ***symfony server:start -d*** pour lancer votre serveur symfony.
 - Configurez le ***.env*** avec vos identifiants de BDD.
 - Démarrez votre service MySql.
 - Faites la commande ***symfony console doctrine:database:create***.
